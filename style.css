@@ -1,0 +1,81 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background : url('/calsi-project/calci-bg.webp');
+    /* backdrop-filter: blur(5px); */
+    /* -webkit-backdrop-filter: blur(5px); */
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+h3{
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Montserrat Alternates', sans-serif;;
+    font-size: xx-large;
+    text-shadow: 5px 5px 5px #111;
+    background-color: darkorange;
+    color: white;
+    border-radius: 5px;
+
+}
+.container{
+    border-radius: 10px;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter:  saturate(50%) blur(5px) brightness(200%);
+    height: 75vh;
+    width: 25vw;
+    border: 3px solid black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    column-gap: 50px;
+    box-shadow: 10px 10px 60px grey;
+}
+
+.container input{
+    font-family: Arial, sans-serif;
+    border: #222;
+    margin: 10px;
+    width: 90%;
+    padding: 10px;
+    height: 40px;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 500;
+}
+.container button{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 500;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.container .grey{
+    background-color: grey;
+}
+.container .orange{
+    background-color: darkorange;
+}
+.container #grid-5 #zero{
+    width: 150px;
+    border-radius: 40px;
+}
