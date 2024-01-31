@@ -85,6 +85,9 @@ h3 {
     background-color: darkorange;
 }
 
+.container button text{
+    color: black;
+}
 
 /* Button Hover Effect */
 .container button:hover {
