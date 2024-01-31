@@ -1,81 +1,128 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap'); */
+/* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
-*{
+
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    background : url('/calci-bg.webp');
-    /* backdrop-filter: blur(5px); */
-    /* -webkit-backdrop-filter: blur(5px); */
 
+/* Body Styling */
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     flex-direction: column;
-    gap: 50px;
+    background: url('/calci-bg.webp');
+    background-size: cover;
+    background-position: center;
 }
-h3{
-    /* font-family: 'Dancing Script', cursive; */
-    font-family: 'Montserrat Alternates', sans-serif;;
+
+/* Header Styling */
+h3 {
+    font-family: 'Montserrat Alternates', sans-serif;
     font-size: xx-large;
     text-shadow: 5px 5px 5px #111;
     background-color: darkorange;
+    margin: 20px;
     color: white;
     border-radius: 5px;
-
 }
-.container{
+
+/* Calculator Container Styling */
+.container {
     border-radius: 10px;
     background: transparent;
     padding: 10px;
-    backdrop-filter:  saturate(50%) blur(5px) brightness(200%);
+    padding-bottom: 20px;
+    backdrop-filter: saturate(50%) blur(5px) brightness(200%);
     height: 75vh;
-    width: 25vw;
+    width: 80vw; /* Adjusted for better responsiveness */
+    max-width: 400px; /* Added to limit the maximum width */
     border: 3px solid black;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
-    column-gap: 50px;
-    box-shadow: 10px 10px 60px grey;
+    box-shadow: 10px 10px 30px grey; /* Adjusted shadow for better visibility */
 }
 
-.container input{
-    font-family: Arial, sans-serif;
-    border: #222;
+/* Input Styling */
+.container input {
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #222; /* Changed to a more suitable border style */
     margin: 10px;
     width: 90%;
     padding: 10px;
     height: 40px;
     text-align: right;
-    font-size: 30px;
+    font-size: 1.5rem; /* Adjusted font size for better readability */
     font-weight: 500;
 }
-.container button{
+
+/* Button Styling */
+.container button {
     border-radius: 50%;
     width: 70px;
     height: 70px;
-    font-size: 20px;
+    font-size: 1.2rem; /* Adjusted font size for better readability */
     font-weight: 500;
+    margin: 5px; /* Added margin for better spacing */
 }
-button:hover{
+
+/* Button Hover Effect */
+.container button:hover {
     cursor: pointer;
     transform: scale(0.9);
 }
-.container .grey{
-    background-color: grey;
-}
-.container .orange{
-    background-color: darkorange;
-}
+
 .container #grid-5 #zero{
     width: 150px;
     border-radius: 40px;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 600px) {
+    html, body {
+        gap: 20px; /* Adjust the gap between elements */
+    }
+
+    h3 {
+        font-size: large;
+    }
+
+    .container {
+        width: 90vw;
+        padding: 5px;
+        height: 85vh;
+        box-shadow: 5px 5px 20px grey; /* Adjusted shadow for smaller screens */
+    }
+
+    .container input {
+        font-size: 1rem; /* Adjusted font size for smaller screens */
+        height: 30px;
+    }
+
+    .container button {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+/* Media Query for Extra Small Screens */
+@media screen and (max-width: 400px) {
+    .container input {
+        font-size: 0.8rem; /* Adjusted font size for extra small screens */
+    }
+
+    .container button {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem; /* Adjusted font size for extra small screens */
+    }
 }
