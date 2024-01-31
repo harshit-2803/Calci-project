@@ -119,7 +119,9 @@ h3 {
     .container input {
         font-size: 0.8rem; /* Adjusted font size for extra small screens */
     }
-
+    h3{
+        text-shadow: 2px 2px 2px #111;
+    }
     .container button {
         width: 40px;
         height: 40px;
