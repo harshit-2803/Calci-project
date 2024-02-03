@@ -1,6 +1,5 @@
 let inp=document.querySelector('input')
 let btn=document.querySelectorAll('button')
-let output = []
 for (let button of btn) {
     button.addEventListener('click',()=>{
         let text = button.innerText
